@@ -45,8 +45,8 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 - **TensorFlow/Keras**: Used for building and training the deep learning model that classifies plant infections.
 - **OpenCV**: For image preprocessing tasks like resizing, augmentation, and transformation before feeding images into the model.
 - **Gemini API**: Powers the AI chatbot, providing users with tailored advice on how to care for and treat their plants.
-- **Flask/Django**: (Optional) Web frameworks that can be used to serve the machine learning model and manage API interactions.
-- **Matplotlib/Seaborn**: Used to visualize model performance and display accuracy and loss graphs during training.
+- **Flask**: The flask web framework was used to serve the machine learning model and manage API interactions.
+- **Matplotlib/Seaborn**: Used to visualize model performance.
 
 
 
