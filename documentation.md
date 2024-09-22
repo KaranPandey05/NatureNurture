@@ -3,7 +3,7 @@
 ## 1. Project Overview
 
 ### 1.1 Project Statement
-- **Problem Statement**: Describe the primary problem or challenge that the project aims to address.
+- **Problem Statement**: Address the lack of education regarding destructive plant diseases and help prevent their spread.
 - **Objectives**: List the key objectives of the project.
 - **Target Audience**: Define who the intended beneficiaries or users are.
 
