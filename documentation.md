@@ -50,11 +50,6 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 - **Flask/Django**: (Optional) Web frameworks that can be used to serve the machine learning model and manage API interactions.
 - **Matplotlib/Seaborn**: Used to visualize model performance and display accuracy and loss graphs during training.
 
-## Usage
-
-1. Upload a clear image of the infected plant leaf.
-2. The AI will classify the infection into one of 38 categories.
-3. The AI chatbot will provide personalized advice on how to care for the plant and treat the infection.
 
 
 ## 2. Documentation of AI Tools Used
