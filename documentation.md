@@ -5,7 +5,7 @@
 ### 1.1 Project Statement
 
 **Problem Statement**:  
-The agricultural sector faces significant threats from plant diseases that can severely reduce crop yields and impact food security. Farmers, particularly in rural or developing areas, often lack access to tools and education that can help them recognize plant infections early. This allows diseases to spread unchecked, leading to large-scale crop destruction. Misidentifying diseases can also lead to incorrect treatments, worsening the problem. This project aims to address these issues by developing an AI-driven solution that detects plant infections from images and provides timely diagnoses.
+The agricultural sector faces significant threats from plant diseases that can severely reduce crop yields and impact food security. Farmers, particularly in rural or developing areas, often lack access to tools and education that can help them recognize plant infections early. This allows diseases to spread unchecked, leading to large-scale crop destruction. Misidentifying diseases can also lead to incorrect treatments, worsening the problem. This project aims to address these issues by developing an AI-driven solution that detects plant infections from images by providing real-time diagnoses and information about how to control these diseases.
 
 **Objectives**:
 - Create an AI model capable of classifying 38 different plant infections based on leaf images.
@@ -25,11 +25,11 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 - **Image Classification**: The AI model classifies plant infections into one of 38 categories based on uploaded images.
 - **AI Chatbot for Plant Care**: An integrated chatbot provides users with personalized plant care advice using the **Gemini API**.
 - **Educational Information**: Detailed insights on the disease, including symptoms, prevention, and treatment methods, are available after diagnosis.
-- **Accessibility**: Designed to be accessible on mobile platforms, the tool is practical for use directly in the field.
+- **Accessibility**: Designed to be accessible on mobile platforms as well as offering support in multiple languages, the tool is practical for use directly in the field to a wide range of users.
 - **User-Friendly Interface**: An intuitive interface enables users to easily upload images, receive diagnoses, and interact with the AI chatbot for further guidance.
 
 **Expected Impact**:
-- **Early Detection**: Early diagnosis helps prevent the spread of plant diseases and improves crop yield management.
+- **Early Detection**: Rapid diagnosis helps prevent the spread of plant diseases and improves crop yield management.
 - **Increased Knowledge**: The AI chatbot educates users on how to treat and care for infected plants, increasing their knowledge of plant diseases.
 - **Enhanced Food Security**: By minimizing the spread of diseases, the solution contributes to higher crop protection and food security.
 - **Accessibility to Expert Knowledge**: The tool makes plant disease knowledge accessible to users who may not have easy access to agricultural experts.
@@ -97,8 +97,6 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 ### 2.3 Total use of AI Tools
 # 2.3 Total Use of AI Tools
 
-
-
 ### Brainstorming
 - **ChatGPT**: 70%
 - **Amazon CodeWhisperer**: 20%
@@ -123,5 +121,6 @@ I utilized Amazon CodeWhisperer and ChatGPT during the front-end development pha
 
 
 ## Jones Cardoso
+ChatGPT and Amazon CodeWhisper were very useful tools helping me to achieve the desired result from my code. I used ChatGPT to give structure to my code that I could personalize based on my needs while CodeWhisperer gave me real-time suggestions and helped with writing syntax. ChatGPT was also helpful in creating the powerpoint by giving me ideas on what to wirte and how to style the presentation. These tools were invaluable and helped me complete my work more efficiently while teaching me new skills.
 
 
