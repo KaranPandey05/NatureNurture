@@ -1,0 +1,421 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px 20px;
+}
+
+
+.background-video, .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Ensure video is below text but above other backgrounds */
+    transition: opacity 1s ease-in-out;
+}
+
+.background-image {
+   /*background-image: url('{{ url_for('static', filename='images/background.jpg') }}');*/
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    z-index: 2;
+}
+
+.welcome-text {
+    display: inline-block;
+    font-size: 5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    border-right: 5px solid;
+    border-color: green; /* Border color of the cursor */
+    color: green; /* Text color */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 40px;
+    animation:
+      typing 3s steps(60, end), /* Adjust timing and steps for typing */
+      cursor .6s step-end infinite alternate;
+}
+
+/* Typing effect animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Cursor blinking effect */
+@keyframes cursor {
+    from { border-color: transparent; }
+    to { border-color: green; } /* Same color as the text */
+}
+
+.content {
+    position: relative;
+    z-index: 4; /* Ensure text content is above video and overlay */
+    color: white;
+}
+
+.explanation-section {
+    background-color: #e0f7fa; /* Light cyan background for a fresh look */
+    padding: 60px 20px; /* Generous padding for a spacious feel */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.explanation-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px; /* Additional padding for content */
+    background-color: #ffffff; /* White background for contrast */
+}
+
+.explanation-content h2 {
+    font-size: 2.5em;
+    color: #00796b; /* Deep teal for the heading */
+    margin-bottom: 10px;
+    background-color: #d0f2f3;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.explanation-content p {
+    font-size: 1.2em;
+    line-height: 1.8; /* Improve readability with larger line spacing */
+    color: #004d40; /* Darker teal for the text */
+    margin-bottom: 20px;
+}
+
+strong {
+    color: #00796b; /* Highlighted text in teal */
+}
+
+.explanation-content p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last paragraph */
+}
+
+/* Button Styles */
+.language-switcher {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+.language-switcher .button {
+    padding: 12px 20px;
+    background-color: #00796b; /* Deep teal button */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher .button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.language-switcher .button:active {
+    background-color: #00362d; /* Even darker on click */
+    transform: translateY(0); /* Reset lift */
+}
+
+.upload-section {
+    background-color: #ffffff;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    display: flex; /* Added flexbox for horizontal layout */
+    flex-direction: row; /* Align elements horizontally */
+  }
+  
+  .upload-area h3 {
+    font-size: 1.5em;
+    color: #1b5e20;
+    margin-bottom: 15px;
+    /* Align text to the left if needed */
+    text-align: center;
+  }
+  
+  .upload-area input[type="file"] {
+    width: 50%; /* Adjust width as needed */
+    padding: 10px 20px;
+    border: 2px solid #388e3c;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    cursor: pointer;
+    /* Additional styling options */
+    background-color: #e0e0e0; 
+    border-color: #8a8a8a;
+  }
+
+
+/* Chatbox Container */
+.chatbox {
+    height: 400px;
+    width: 1000px;
+    border: 2px solid #388e3c;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f1f8e9; /* Softer green background */
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+     /* Adjust this value to move the chatbox up */
+}
+/* Chatbox Header */
+.chatbot-area h3 {
+    font-size: 3em; /* Font size for the header */
+    color: #1b5e20; /* Dark green text color */
+    margin-bottom: 10px; /* Space below the header */
+    margin-top: 20px; /* Space above the header */
+    text-align: center; /* Center-align the header */
+    margin-top: -250px;
+}
+
+/* Chatbox Container */
+#chatbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between messages */
+    padding: 20px;
+    overflow-y: auto;
+    height: 600px;
+    width: 1400px;
+    border: 2px solid #388e3c;
+    border-radius: 10px;
+    background-color: #f1f8e9;
+}
+
+/* Custom scrollbar */
+.chatbox::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background-color: #388e3c;
+    border-radius: 10px;
+}
+
+/* Individual Chat Messages */
+.message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%; /* Adjust width for user and bot messages */
+    word-wrap: break-word;
+    display: inline-block; /* To prevent full-width stretching */
+}
+
+/* User Message */
+.message.user {
+    background-color: #c8e6c9; /* Light green */
+    align-self: flex-end; /* Align to the right */
+    text-align: right; /* Align text to the right */
+}
+
+/* Bot Message */
+.message.bot {
+    background-color: #e3f2fd; /* Light blue */
+    align-self: flex-start; /* Align to the left */
+    text-align: left; /* Align text to the left */
+}
+
+/* Chatbox Input Field */
+#userInput {
+    padding: 12px 15px;
+    border: 2px solid #388e3c;
+    border-radius: 30px;
+    background-color: #fff; 
+    font-size: 1em;
+    color: #004d40; 
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-right: 10px;
+}
+
+#userInput:focus {
+    border-color: #1b5e20; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+
+#userInput::placeholder {
+    color: #7d9d8b; 
+    font-style: italic;
+}
+
+/* Send Button */
+#sendMessage {
+    padding: 12px 20px;
+    background-color: #388e3c; 
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Match rounded corners with input field */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    height: 100%; /* Ensure height matches the input field */
+}
+
+#sendMessage:hover {
+    background-color: #2e7d32; 
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+#sendMessage:active {
+    background-color: #1b5e20; /* Even darker on click */
+    transform: translateY(0); /* Reset lift */
+}
+
+/* Flex container for input and button */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Space above input area */
+}
+
+
+/* General Button Styles */
+.upload-area input[type="submit"],
+#sendMessage {
+    padding: 12px 20px;
+    background-color: #00796b; 
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 10px; /* Space above the buttons */
+}
+
+/* Button hover and active states */
+.upload-area input[type="submit"]:hover,
+#sendMessage:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.upload-area input[type="submit"]:active,
+#sendMessage:active {
+    background-color: #00362d; /* Even darker on click */
+    transform: translateY(0); /* Reset lift */
+}
+
+/* Upload Input Field */
+.upload-area input[type="file"] {
+    width: 100%;
+}
+
+/* Chatbox Input Field */
+#userInput {
+    width: calc(100% - 130px); /* Adjust for button width and margin */
+    padding: 12px 20px;
+    border: 2px solid #388e3c; /* Same green theme as buttons */
+    border-radius: 30px; /* Rounded corners */
+    background-color: #f9fbe7; /* Soft green background */
+    font-size: 1em;
+    color: #004d40; /* Darker green text */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-right: 10px; /* Space between input and button */
+}
+
+/* Focus state for the text input */
+#userInput:focus {
+    border-color: #1b5e20; /* Darker green on focus */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+/* Placeholder text style */
+#userInput::placeholder {
+    color: #7d9d8b; /* Muted green for placeholder */
+    font-style: italic; /* Italic placeholder text */
+}
+
+/* Send Button to match input field height */
+#sendMessage {
+    padding: 12px 20px;
+    background-color: #00796b; /* Deep teal button */
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Match rounded corners with input field */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Ensure height matches the input field */
+}
+
+#sendMessage:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+#sendMessage:active {
+    background-color: #00362d; /* Even darker on click */
+    transform: translateY(0); /* Reset lift */
+}
+
+/* Flex container for input and button */
+.input-container {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space above input area */
+}
+
+
+
+/* Image Preview Container */
+#imagePreview {
+    border-radius: 15px; /* Rounded corners */
+    background-color: #ffffff; /* White background for the preview */
+    padding: 10px; /* Inner padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    margin-top: 20px; /* Space above the preview area */
+    text-align: center; /* Center the image */
+    max-width: auto;
+}
+
+/* Image Styling */
+#imagePreview img {
+    border-radius: 10px; /* Rounded corners for the image */
+    max-width: 100%; /* Ensure it scales within the container */
+    height: auto; /* Maintain aspect ratio */
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Prosperity Health Program</title>
+
+    <!-- Link to the CSS file in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- jQuery for AJAX (you can also use plain JS) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Link to JS file if applicable -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Section 1: Welcoming Page -->
+        <section id="welcome" class="welcome-section">
+
+            <!-- Update the video path to load from the static folder -->
+            <video id="intro-video" class="background-video" autoplay muted>
+                <source src="{{ url_for('static', filename='videos/plant_ai opener.mp4') }}" type="video/mp4">
+            </video>
+            <div id="background-image" class="background-image"></div>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="welcome-text">NatureNurturer<br>Designed by EdgeStreak</h1>
+            </div>
+        </section>
+
+        <!-- Section 2: Explanation Section with Language Switcher -->
+        <section id="explanation" class="explanation-section">
+            <div class="explanation-content">
+                <h2 data-en="How it Works" data-fr="Comment il fonctionne" data-cn="它是如何工作">How it Works</h2>
+
+                <p data-en="Welcome to NatureNurture! This platform is designed to assist you in identifying and managing plant diseases.
+                    Simply upload an image of your plant, and our AI will analyze the image, detect any signs of diseases, and suggest remedies or preventive measures."
+                    data-fr="Bienvenue à NatureNurture! Cette plateforme est conçue pour vous aider à identifier et gérer les maladies des plantes.
+                    Il suffit de télécharger une image de votre plante et notre IA analysera l’image, détectera les signes de maladies et suggérera des remèdes ou des mesures préventives."
+                    data-cn="欢迎来到NatureNurture!此平台旨在帮助您识别和管理植物病害。
+                    只需上传您工厂的图像,我们的AI就会分析图像,检测任何疾病迹象,并建议补救措施或预防措施。">
+                    Welcome to <strong>Leaf Edger</strong>! This platform is designed to assist you in
+                    <strong>identifying</strong> and <strong>managing diseases</strong>.
+                    Simply upload an <strong>image</strong> of your plant, and our <strong>AI</strong> will analyze the
+                    image, <strong>detect</strong> any signs of diseases, and suggest remedies or preventive measures.
+                </p>
+
+                <p data-en="Follow the instructions below to get started and chat with our virtual assistant if you need further assistance."
+                    data-fr="Suivez les instructions ci-dessous pour commencer et discuter avec notre assistant virtuel si vous avez besoin d’aide."
+                    data-cn="如果您需要进一步的帮助,请按照以下说明开始与我们的虚拟助理聊天。">
+                    Follow the instructions below to get started and chat with our virtual assistant if you need further
+                    assistance.
+                </p>
+
+                <!-- Language switcher inside explanation-content -->
+                <div class="language-switcher">
+                    <button class="button" onclick="switchLanguage('en')">English</button>
+                    <button class="button" onclick="switchLanguage('fr')">Français</button>
+                    <button class="button" onclick="switchLanguage('cn')">Chinese</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Image Upload -->
+        <section id="upload" class="upload-section">
+            <div class="upload-area">
+                <h3 data-en="Upload Image" data-fr="Télécharger une Image" data-cn="上传图片">Upload Image</h3>
+
+                <!-- AJAX-based Image Upload Form -->
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <label for="file" data-cn="选择要上传的叶子图像：" data-fr="Choisissez une image de feuille à télécharger">Choose a leaf image to upload:</label><br><br>
+                    <input type="file" id="file" name="file" accept="image/*" required><br><br>
+                    <input type="submit" value="Upload and Predict" >
+                    <br>
+                    <br>
+                </form>
+
+                <!-- Area to display uploaded image and prediction -->
+                <div id="imagePreview"></div>
+                <br>
+                <br>
+                <div id="predictionResult"></div>
+            </div>
+    </div>
+    <section id="upload" class="upload-section">
+
+        <div class="chatbot-area">
+            <h3 id='chatbot_title' data-fr="Chatbot" data-cn="查特伯特">Chatbot</h3>
+            <br>
+            <div class="chatbox" id="chatbox">
+                <!-- Chat messages will go here -->
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Ask the botanist..." style="max-width: 80%;">
+                <button id="sendMessage" style="max-width: 18%;" data-cn="发送" data-fr="envoyer">Send</button>
+            </div>
+
+
+    </section>
+
+
+
+
+    </div>
+    </div>
+
+    <!-- JavaScript for chatbot and AJAX requests -->
+    <script type="text/javascript">
+        $(document).ready(function (e) {
+            // Image upload logic (unchanged)
+            $('#uploadForm').on('submit', function (e) {
+                e.preventDefault();  // Prevent page reload
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: '/upload',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        var imageUrl = URL.createObjectURL($('#file')[0].files[0]);
+                        $('#imagePreview').html('<img src="' + imageUrl + '" alt="Uploaded Image" width="300px"><br>');
+                        $("\n")
+                        $("\n")
+                        $('#predictionResult').html(
+                            '<h3 data-cn = "预言" data-fr = "Prédiction">Prediction: ' + response.prediction + '</h3>' +
+                            '<p style = "font-size: 1.5em" data-cn = "相信" data-fr = "Confiance">Confidence: ' + response.confidence + '%</p>'
+                        );
+                    },
+                    error: function (response) {
+                        $('#predictionResult').html('<h3>Error: ' + response.responseText + '</h3>');
+                    }
+                });
+            });
+
+            // Chatbot logic
+            $('#sendMessage').on('click', function () {
+                var userMessage = $('#userInput').val();
+                if (userMessage.trim() === '') return;
+
+                // Display user's message
+                $('#chatbox').append('<div class="message user"><strong>You:</strong> ' + userMessage + '</div>');
+
+                // AJAX request to send the message to the Flask backend
+                $.ajax({
+                    url: '/chatbot',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ message: userMessage }),
+                    success: function (response) {
+                        // Display the bot's response
+                        $('#chatbox').append('<div class="message bot"><strong>Bot:</strong> ' + response.response + '</div>');
+                        $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);  // Scroll to bottom
+                    },
+                    error: function () {
+                        $('#chatbox').append('<div class="message bot"><strong>Bot:</strong> ' + response + '</div>');
+                    }
+                });
+
+                // Clear the input field
+                $('#userInput').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>

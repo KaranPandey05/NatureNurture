@@ -1,0 +1,11 @@
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.optimizers import RMSprop
+import matplotlib.pyplot as plt
+import tensorflow as tf  
+import numpy as np
+import cv2
+import os
+
+img = image.load_img(r"C:\Users\karan\Python ML\Face Rating ML\basedata\train\5 train\hyunjin.jpg")
+plt.imshow(img)
