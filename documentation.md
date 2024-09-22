@@ -22,8 +22,8 @@
 ## 2. Documentation of AI Tools Used
 
 ### 2.1 Overview of AI Tools
-- **Tool Name**: List each AI tool used (e.g., ChatGPT, CodeWhisperer).
-- **Purpose**: Describe the purpose of each tool in the context of the project.
+- **Tool Name**: ChatGPT for getting ideas about our code, Gemini for the chatbot API
+- **Purpose**: 
 
 ### 2.2 Application of AI Tools
 - **When Applied**: Specify when each tool was applied during the project phases (e.g., brainstorming, developing).
