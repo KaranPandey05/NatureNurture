@@ -43,7 +43,7 @@
                     Il suffit de télécharger une image de votre plante et notre IA analysera l’image, détectera les signes de maladies et suggérera des remèdes ou des mesures préventives."
                     data-cn="欢迎来到NatureNurture!此平台旨在帮助您识别和管理植物病害。
                     只需上传您工厂的图像,我们的AI就会分析图像,检测任何疾病迹象,并建议补救措施或预防措施。">
-                    Welcome to <strong>Leaf Edger</strong>! This platform is designed to assist you in
+                    Welcome to <strong>NatureNurture</strong>! This platform is designed to assist you in
                     <strong>identifying</strong> and <strong>managing diseases</strong>.
                     Simply upload an <strong>image</strong> of your plant, and our <strong>AI</strong> will analyze the
                     image, <strong>detect</strong> any signs of diseases, and suggest remedies or preventive measures.
@@ -89,14 +89,14 @@
     <section id="upload" class="upload-section">
 
         <div class="chatbot-area">
-            <h3 id='chatbot_title' data-fr="Chatbot" data-cn="查特伯特">Chatbot</h3>
+            <h3 id='chatbot_title' data-fr="Chatbot" data-cn="查特伯特">Mother Nature</h3>
             <br>
             <div class="chatbox" id="chatbox">
                 <!-- Chat messages will go here -->
             </div>
 
             <div class="input-container">
-                <input type="text" id="userInput" placeholder="Ask the botanist..." style="max-width: 80%;">
+                <input type="text" id="userInput" placeholder="Message Mother Nature..." style="max-width: 80%;">
                 <button id="sendMessage" style="max-width: 18%;" data-cn="发送" data-fr="envoyer">Send</button>
             </div>
 
@@ -156,11 +156,11 @@
                     data: JSON.stringify({ message: userMessage }),
                     success: function (response) {
                         // Display the bot's response
-                        $('#chatbox').append('<div class="message bot"><strong>Bot:</strong> ' + response.response + '</div>');
+                        $('#chatbox').append('<div class="message bot"><strong>Mother Nature:</strong> ' + response.response + '</div>');
                         $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);  // Scroll to bottom
                     },
                     error: function () {
-                        $('#chatbox').append('<div class="message bot"><strong>Bot:</strong> ' + response + '</div>');
+                        $('#chatbox').append('<div class="message bot"><strong>Mother Nature:</strong> ' + response + '</div>');
                     }
                 });
 
