@@ -97,7 +97,7 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 ### 2.3 Total use of AI Tools
 # 2.3 Total Use of AI Tools
 
-## Karan Pandey
+
 
 ### Brainstorming
 - **ChatGPT**: 70%
@@ -114,15 +114,12 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 - **Amazon CodeWhisperer**: 30%
 - **Google Gemini**: 50%
 
-
-## Summary of Tool Usage
-- **ChatGPT** was predominantly used during the brainstorming phase for generating ideas and structuring the project, accounting for 70% of usage in that phase. It also played a significant role in documentation, where it helped simplify complex concepts.
-- **Amazon CodeWhisperer** was the most utilized tool during the development phase, with 50% usage, providing crucial debugging support and insights into model training.
-- **Google Gemini** was less frequently used overall, primarily contributing to optimization recommendations and targeted resources during model training.
+## Karan Pandey
+ChatGPT was mainly used during the brainstorming phase, accounting for 70% of usage as it helped generate ideas and structure the project. It also played a significant role in documentation by simplifying complex concepts. In the development phase, Amazon CodeWhisperer emerged as the most utilized tool, with 50% usage, providing crucial debugging support and insights into model training. Meanwhile, Google Gemini was used less frequently, primarily contributing optimization recommendations and targeted resources during model training. Together, these tools enhanced the overall effectiveness of the project.
 
 
 ## Alexander Yong
-
+I utilized Amazon CodeWhisperer and ChatGPT during the front-end development phase. With ChatGPT's assistance, I generated ideas and structured components effectively, while Amazon CodeWhisperer provided critical support for debugging and insights into server handling. I leveraged these tools to learn how to seamlessly connect the Python Flask back end to the front end, enhancing the overall functionality of the application. Additionally, I discovered more efficient ways to layout the website using CSS and HTML, improving the user interface and experience.
 
 
 ## Jones Cardoso
