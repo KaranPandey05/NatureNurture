@@ -20,5 +20,5 @@ Address the lack of education regarding destructive plant diseases and help prev
 
 ### PROPOSED SOLUTION
 Create an application that can identify / diagnose  diseases that a plant has from a picture of the leaves
-Create an easy to use GUI to compliment the simplicity of the app and to meet the needs of the target audiaece
+Create an easy to use GUI to compliment the simplicity of the app and to meet the needs of the target audience
 
