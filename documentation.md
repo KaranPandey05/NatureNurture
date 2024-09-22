@@ -95,8 +95,36 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 - **Optimization:** Google Gemini provided targeted resources for enhancement.
 
 ### 2.3 Total use of AI Tools
-- **Participan 1-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 2-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 3-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 4-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
-- **Participan 5-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
+# 2.3 Total Use of AI Tools
+
+## Karan Pandey
+
+### Brainstorming
+- **ChatGPT**: 70%
+- **Amazon CodeWhisperer**: 20%
+- **Google Gemini**: 10%
+
+### Development
+- **ChatGPT**: 30%
+- **Amazon CodeWhisperer**: 50%
+- **Google Gemini**: 20%
+
+### Documentation
+- **ChatGPT**: 20%
+- **Amazon CodeWhisperer**: 30%
+- **Google Gemini**: 50%
+
+
+## Summary of Tool Usage
+- **ChatGPT** was predominantly used during the brainstorming phase for generating ideas and structuring the project, accounting for 70% of usage in that phase. It also played a significant role in documentation, where it helped simplify complex concepts.
+- **Amazon CodeWhisperer** was the most utilized tool during the development phase, with 50% usage, providing crucial debugging support and insights into model training.
+- **Google Gemini** was less frequently used overall, primarily contributing to optimization recommendations and targeted resources during model training.
+
+
+## Alexander Yong
+
+
+
+## Jones Cardoso
+
+
