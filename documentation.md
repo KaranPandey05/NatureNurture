@@ -4,8 +4,8 @@
 
 ### 1.1 Project Statement
 - **Problem Statement**: Address the lack of education regarding destructive plant diseases and help prevent their spread.
-- **Objectives**: List the key objectives of the project.
-- **Target Audience**: Define who the intended beneficiaries or users are.
+- **Objectives**: Create an application that can identify / diagnose diseases that a plant has from a picture of the leaves. Create an easy to use GUI to compliment the simplicity of the app and to meet the needs of the target audience.
+- **Target Audience**: Farmers, Gardners, Horticulturists and Landscapers.
 
 ### 1.2 Proposed Solution
 - **Solution Overview**: Provide a summary of the proposed solution.
