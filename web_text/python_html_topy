@@ -1,0 +1,21 @@
+from flask import Flask, request, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('text_input.html')
+
+@app.route('/submit', methods=['POST'])
+def submit_text():
+    # Get the value from the text box using the 'name' attribute in the form
+    user_input = request.form['user_input']
+    
+    # Use the input in Python
+    print(f"User entered: {user_input}")
+    
+    # Return a response to display the input back to the user
+    return f"Text received: {user_input}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
