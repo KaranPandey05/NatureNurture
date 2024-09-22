@@ -2,8 +2,6 @@
 
 ## 1. Project Overview
 
-## 1. Project Overview
-
 ### 1.1 Project Statement
 
 **Problem Statement**:  
@@ -55,13 +53,46 @@ This project offers an AI-powered tool that helps users identify plant diseases 
 ## 2. Documentation of AI Tools Used
 
 ### 2.1 Overview of AI Tools
-- **Tool Name**: ChatGPT for getting ideas about our code, Gemini for the chatbot API
-- **Purpose**: 
+
+### 1. ChatGPT
+**Purpose:**
+- Brainstorming and ideation during project initiation.
+- Understanding documentation and syntax for libraries like TensorFlow, Keras, and OpenCV.
+- Clarifying parameters and syntax for training the CNN in TensorFlow/Keras.
+- Supporting integration of the Gemini API for chatbot functionality.
+- Assisting in CSS styling for improved user experience.
+
+### 2. Amazon CodeWhisperer (Amazon Q)
+**Purpose:**
+- Debugging and resolving issues during development.
+- Navigating documentation for libraries and frameworks.
+- Providing insights into CNN model training in TensorFlow/Keras.
+- Supporting integration of the Gemini API within the web app.
+- Helping with web app styling using CSS.
+
+### 3. Google Gemini
+**Purpose:**
+- Optimizing the CNN by providing recommendations for performance improvement.
+- Suggesting helpful YouTube videos based on project needs, significantly aiding in CNN optimization.
+
 
 ### 2.2 Application of AI Tools
-- **When Applied**: Specify when each tool was applied during the project phases (e.g., brainstorming, developing).
-- **How Applied**: Detail the methods or processes through which the AI tool was utilized.
-- **Rationale**: Explain why each tool was selected for its specific application.
+### When Applied
+- **Brainstorming:** Ideas generated during the initial phases.
+- **Development and Debugging:** Both ChatGPT and Amazon Q were consulted throughout the development phase.
+- **Model Training:** Clarification on setting up and training the CNN.
+- **API Integration:** Integrated the Gemini API for chatbot features.
+- **Web Design:** Assisted in creating a functional and user-friendly interface.
+- **CNN Optimization:** Google Gemini provided valuable resources for optimizing the CNN.
+
+### How Applied
+- **Brainstorming:** Creative insights for model design.
+- **Debugging:** Identification of bugs and proposed fixes.
+- **Documentation Assistance:** Simplifying complex documentation for libraries.
+- **Model Training:** Configuration of CNN parameters.
+- **API Integration:** Finding methods for integrating the Gemini API.
+- **Web Styling:** Suggestions and CSS syntax for UI design.
+- **Optimization:** Google Gemini provided targeted resources for enhancement.
 
 ### 2.3 Total use of AI Tools
 - **Participan 1-- %usage**: Detail the percentage of AI tool usage by the participant across different project phases, such as brainstorming, development, documentation, and testing. Specify which tools were used most frequently.
