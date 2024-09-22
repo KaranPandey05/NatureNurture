@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Prosperity Health Program</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: Welcoming Page -->
+        <section id="welcome" class="welcome-section">
+            <video id="intro-video" class="background-video" autoplay muted>
+                <source src="plant_ai opener.mp4" type="video/mp4">
+            </video>
+            <div id="background-image" class="background-image"></div>
+            <div class="overlay"></div>
+            <div class="content">
+                <h1 class="welcome-text">Leaf Edger<br>Designed by EdgeStreak</h1>
+                <!--
+                <h2>This AI-driven program helps identify plant diseases. Upload an image of the plant, and our AI will analyze it to detect any diseases and offer solutions for curing or managing the disease.</h2>
+                -->
+            </div>
+        </section>
+
+        <!-- Section 2: Explanation Section with Language Switcher -->
+        <section id="explanation" class="explanation-section">
+            <div class="explanation-content">
+                <h2 data-en="How it Works"
+                    data-fr="Comment il fonctionne"
+                    data-cn="它是如何工作">How it Works</h2>
+        
+                <p data-en="Welcome to NatureNurture! This platform is designed to assist you in identifying and managing plant diseases.
+                    Simply upload an image of your plant, and our AI will analyze the image, detect any signs of diseases, and suggest remedies or preventive measures."
+                    data-fr="Bienvenue à NatureNurture! Cette plateforme est conçue pour vous aider à identifier et gérer les maladies des plantes.
+                    Il suffit de télécharger une image de votre plante et notre IA analysera l’image, détectera les signes de maladies et suggérera des remèdes ou des mesures préventives."
+                    data-cn="欢迎来到NatureNurture!此平台旨在帮助您识别和管理植物病害。
+                    只需上传您工厂的图像,我们的AI就会分析图像,检测任何疾病迹象,并建议补救措施或预防措施。">
+                    Welcome to <strong>Leaf Edger</strong>! This platform is designed to assist you in <strong>identifying</strong> and  <strong>managing diseases</strong> .
+                    Simply upload an <strong>image</strong> of your plant, and our <strong>AI</strong> will analyze the image, <strong>detect</strong> any signs of diseases, and suggest remedies or preventive measures.
+                </p>
+        
+                <p data-en="Follow the instructions below to get started and chat with our virtual assistant if you need further assistance."
+                   data-fr="Suivez les instructions ci-dessous pour commencer et discuter avec notre assistant virtuel si vous avez besoin d’aide."
+                   data-cn="如果您需要进一步的帮助,请按照以下说明开始与我们的虚拟助理聊天。">
+                    Follow the instructions below to get started and chat with our virtual assistant if you need further assistance.
+                </p>
+        
+                <!-- Language switcher inside explanation-content -->
+                <div class="language-switcher">
+                    <button class="button" onclick="switchLanguage('en')">English</button>
+                    <button class="button" onclick="switchLanguage('fr')">Français</button>
+                    <button class="button" onclick="switchLanguage('cn')">Chinese</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Section 3: Image Upload and Chatbot -->
+        <section id="upload" class="upload-section">
+            <div class="upload-area">
+                <h3 data-en="Upload Image"
+                    data-fr="Télécharger une Image"
+                    data-cn="上传图片">Upload Image</h3>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <div class="chatbot-area">
+                <h3 data-en="Chatbot"
+                    data-fr="Chatbot"
+                    data-cn="查特伯特">Chatbot</h3>
+                <div class="chatbox">
+                    <!-- Chatbot interaction will appear here -->
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
