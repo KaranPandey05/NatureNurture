@@ -1,17 +1,4 @@
-# AI4SG-Hackathon
-The "AI for Social Good Hackathon" is an exciting event where students get together to utilize the power of artificial intelligence to create impactful software solutions. The goal is to develop software that addresses societal challenges and improve the quality of life for individuals and communities. 
-
--------------------------------------------------------------------------------------
- REQUIRED INFORMATION 
--------------------------------------------------------------------------------------
-
-
-### TEAM NAME
-EdgeStreak
-
-
-
-## Problem Statement
+## The Problem
 
 The agricultural sector faces significant challenges due to the rapid spread of plant diseases, which can severely reduce crop yields and impact global food security. Farmers and gardeners, particularly in rural or less-developed areas, often lack access to advanced education or tools that could help them recognize early signs of plant infections. This delay in diagnosis allows infections to spread unchecked, leading to destructive outbreaks that could otherwise be prevented. Furthermore, misidentifying diseases or using incorrect treatment methods can exacerbate the problem. Current methods for identifying plant diseases rely heavily on expert knowledge, which is often not readily available.
 
