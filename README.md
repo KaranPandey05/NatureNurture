@@ -26,3 +26,5 @@ This AI-driven program aims to bridge the educational gap by providing an access
 
 Dataset used: https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset/data
 
+Demo video: https://youtu.be/xJU3Xl-oIzk?si=WWat1o6rXIy48h1s
+
